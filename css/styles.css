@@ -87,14 +87,18 @@ img {
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 20rem;
-    padding: 5rem 0;
-    min-height: 110rem;
+    padding: 5rem 0 0 0;
+    min-height: 20rem;
 }
 
 
 .header__logo{
     width: 30rem;
     margin: 4rem auto 3rem auto;
+}
+
+span{
+    color: var(--primario);
 }
 
 @media (min-width: 768px) {
@@ -118,3 +122,14 @@ img {
         background-size: 85rem;
     }
 }
+
+
+/*Encriptador*/
+
+.encriptador__informacion{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 0;
+}
+
