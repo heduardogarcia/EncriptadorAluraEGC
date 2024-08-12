@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encripta Fácil-Eduardo Garcia-Alura</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet"> 
+
+
+
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/styles.css">
 </head>
@@ -21,32 +28,39 @@
          
         </div>
     </header>
-    <main class="encriptador">
+    <main class="encriptador__contenedor">
         <h3 class="encriptador__heading text-center">Encript<span>Alura</span></h3>
-        <div class="encriptador__contenedor">
-            <textarea name="encriptador__texto" placeholder="">Ingrese el texto aqui</textarea>
+        <div class="encriptador__grid">
+        
+            <div class="encriptador__contenido">
+                <textarea oninput="validarCadenaTexto()" id="encriptador_texto" class="encriptador__texto" rows="8" cols="25" placeholder="Ingrese el texto aqui"></textarea>
+            </div>
             <div class="encriptador__informacion">
                 <img src="./assets/img/exclamacion.svg" alt="icono exclamación">
-                <h6 class="encriptador__informacion__texto">Solo letras y minusculas y sin acentos</h6>
+                <h6 class="encriptador__informacion__texto " >Solo letras y minusculas y sin acentos</h6>
             </div>
             <div class="encriptador__botones">
-                <a href="#" class="encriptador__boton">Encriptar</a>
-                <a href="#" class="encriptador__boton" disabled>DesEncriptar</a>
+                <a href="#" class="encriptador__boton bg-primario" onclick="encriptar()">Encriptar</a>
+                <a href="#" class="encriptador__boton" onclick="desencriptar()" >DesEncriptar</a>
             </div>
-        </div>
 
-
-
-        <div class="encriptador__cadena">
-            <div class="encriptador__cadena__contenedor">
-                <textarea name="encriptador__cadena__texto" placeholder="">Ningún mensaje fue encontrado</textarea>
-                
-                <div class="encriptador__cadena__botones">
-                    <a href="#" class="header__boton">Copiar</a>
+            <div class="encriptador__resultado">
+                <div class="encriptador__resultado__image" id="encriptador__resultado__image">
+                    <img class="imagen__buscador" src="./assets/img/Muñeco.png" alt="imagen muñeco">
                 </div>
-                
+                <div class="encriptador__resultado__cadena" id="resultadoTexto">
+                    <h4 class="encriptador__resultado__cadena__mensaje" id="cadenaDescriptar">Ningún mensaje fue encontrado</h4>
+                    <h5 class="mensaje">Ingrese el texto que desees encriptar o Desencriptar</h5>
+                </div>  
+                <div class="encriptador__resultado__copy">
+                    <button onclick="copiarTexto()" class="encriptador__resultado__copy-button"  id="encriptador__resultado__copy-button">Copiar</button>
+                    <!-- <button class="encriptador__resultado__copy-button" onclick="copyToClipboard()">Copiar</button> -->
+                </div>
             </div>
+            
         </div>
+
+                 
     </main>
    
    
